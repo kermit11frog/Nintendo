@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nintendo</title>
+		<!-- META TAGS -->
+		<meta name="viewport" content="width=device-width, initial-scale=0.1">
+		<meta charset="utf-8">
+		<!-- LINKS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+				<div class="left-side">
+					<div class="menu">
+						<a href="#" class="active"><i class="fa fa-gamepad"></i> <span>Store</span></a>
+						<a href="#"><i class="fa fa-phone"></i> <span>Support</span></a>
+					</div>
+					<form class="search-box" action="/">
+						<label for="sinput"><i class="fa fa-search"></i></label>
+						<input type="text" name="search" placeholder="Search Games ..." id="sinput">
+					</form>
+				</div>
+				<a href="#" class="logo"><img src="img/nintendo.png"></a>
+				<div class="right-side">
+					<div class="icon-menu">
+						<a href="#" class="icon-link"><i class="fa fa-heart"></i></a>
+						<a href="#" class="icon-link cart"><i class="fa fa-shopping-cart"></i></a>
+					</div>
+					<div class="coin-box">
+						<img src="img/coin.png">
+						<span>12603</span>
+						<a href="#" class="buy-coin"><i class="fa fa-plus"></i></a>
+					</div>
+					<div class="profile">
+						<img src="img/avatar1.png">
+						<ul>
+							<a href="#"><i class="fa fa-edit"></i> <span>Edit Profile</span></a>
+							<a href="#"><i class="fa fa-lock"></i> <span>Change Password</span></a>
+							<a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- START 950px nav2 -->
+			<nav class="nav2">
+				<div class="left-side">
+					<button><i class="fa fa-align-justify"></i></button>
+					<ul>
+						<form class="search-box" action="/">
+							<label for="sinput"><i class="fa fa-search"></i></label>
+							<input type="text" name="search" placeholder="Search Games ..." id="sinput">
+						</form>
+						<a href="#" class="active">Store</a>
+						<a href="#">Support</a>
+						<div class="profile">
+							<div>
+								<img src="img/avatar2.png">
+								<span>user-5672</span>
+								<i class="fa fa-angle-up"></i>
+							</div>
+							<ul>
+								<a href="#"><i class="fa fa-edit"></i> <span>Edit Profile</span></a>
+								<a href="#"><i class="fa fa-lock"></i> <span>Change Password</span></a>
+								<a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a>
+							</ul>
+						</div>
+					</ul>
+				</div>
+				<a href="#" class="logo"><img src="img/nintendo.png"></a>
+				<div class="right-side">
+					<div class="icon-menu">
+						<a href="#" class="icon-link"><i class="fa fa-heart"></i></a>
+						<a href="#" class="icon-link cart"><i class="fa fa-shopping-cart"></i></a>
+					</div>
+				</div>
+			</nav>
+			<!-- END 950px nav2 -->
+			<div class="header-content">
+				<div>
+					<p>Fun <span style="color: orange;">Games</span> Nintendo Switch</p>
+					<p>Be sure try our selection of games, we have carefully chosen then. There are games for all tastes.</p>
+				</div>
+				<img src="img/controller1.webp">
+			</div>
+		</header>
+	</body>
+	<script type="text/javascript">
+		var profile = document.querySelector(".nav2 > .left-side > ul > .profile");
+		var icon = document.querySelector(".nav2 > .left-side > ul > .profile > div > i");
+		var ul = document.querySelector(".nav2 > .left-side > ul > .profile > ul");
+
+		var leftside = document.querySelector(".nav2 > .left-side");
+		var menuButton = document.querySelector(".nav2 > .left-side > button");
+
+		profile.addEventListener("click", () => {
+			profile.classList.toggle("open");
+			if (profile.classList.contains("open")) {
+				icon.classList.remove("fa-angle-up");
+				icon.classList.add("fa-angle-down");
+			} else {
+				icon.classList.remove("fa-angle-down");
+				icon.classList.add("fa-angle-up");
+			};
+		})
+
+		menuButton.addEventListener("click", () => {
+			leftside.classList.toggle("active");
+		})
+	</script>
+</html>
